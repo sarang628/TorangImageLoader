@@ -29,10 +29,18 @@ android {
 }
 
 afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
+    publishing{
+        publications{
+            release(MavenPublication){
                 from components.release
+                groupId = 'com.example'
+                artifactId = 'TorangImageLoader'
+                version = '1.0'
+            }
+
+            debug(MavenPublication) {
+                // Applies the component for the debug build variant.
+                from components.debug
                 groupId = 'com.example'
                 artifactId = 'TorangImageLoader'
                 version = '1.0'
