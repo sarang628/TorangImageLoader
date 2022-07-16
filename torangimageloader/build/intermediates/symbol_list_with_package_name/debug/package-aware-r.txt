@@ -1,3 +1,0 @@
-com.sarang.torangimageloader
-drawable profile_holder
-string app_name
