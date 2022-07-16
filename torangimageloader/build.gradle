@@ -45,7 +45,7 @@ afterEvaluate {
             release(MavenPublication){
                 from components.release
                 groupId = 'com.example'
-                artifactId = 'TorangImageLoader'
+                artifactId = 'torangImageLoader'
                 version = '1.0'
             }
         }
