@@ -5,6 +5,9 @@ plugins {
     id 'maven-publish'
 }
 
+group = 'com.github.jitpack'
+version = '1.0'
+
 android {
     compileSdk 32
 
@@ -28,6 +31,14 @@ android {
 
 }
 
+dependencies {
+    implementation 'com.github.bumptech.glide:glide:4.13.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'
+
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+}
+
+
 afterEvaluate {
     publishing{
         publications{
@@ -37,24 +48,6 @@ afterEvaluate {
                 artifactId = 'TorangImageLoader'
                 version = '1.0'
             }
-
-            debug(MavenPublication) {
-                // Applies the component for the debug build variant.
-                from components.debug
-                groupId = 'com.example'
-                artifactId = 'TorangImageLoader'
-                version = '1.0'
-            }
-        }
-        repositories {
-            mavenLocal()
         }
     }
-}
-
-dependencies {
-    implementation 'com.github.bumptech.glide:glide:4.13.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'
-
-    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
 }
