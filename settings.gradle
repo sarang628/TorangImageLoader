@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "TorangImageLoader"
-include ':app'
+//include ':app'
 include ':TorangImageLoader'
